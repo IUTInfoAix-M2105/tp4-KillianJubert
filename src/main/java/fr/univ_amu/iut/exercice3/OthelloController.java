@@ -47,17 +47,13 @@ public class OthelloController {
 
     private void afficheDialogFinDePartie() {
         Alert message = new Alert(Alert.AlertType.INFORMATION);
-        int pointsPerdant = Joueur.BLANC.getScore();
         int pointsGagnant = Joueur.NOIR.getScore();
         String nomGagnant = "Noir";
-        String nomPerdant = "Blanc";
         if (Joueur.BLANC.getScore() > Joueur.NOIR.getScore()) {
             nomGagnant = "Blanc";
-            nomPerdant = "Noir";
             pointsGagnant = Joueur.BLANC.getScore();
-            pointsPerdant = Joueur.NOIR.getScore();
         }
-        message.setContentText(String.format("Le joueur %s a gagné avec %d points. Le joueur %s a perdu avec %d points", nomGagnant, pointsGagnant, nomPerdant, pointsPerdant));
+        message.setContentText(String.format("Le joueur %s a gagné avec %d points.", nomGagnant, pointsGagnant));
         message.showAndWait();
 
     }
