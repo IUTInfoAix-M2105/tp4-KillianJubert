@@ -13,7 +13,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CounterController implements Initializable {
-
     IntegerProperty counter = new SimpleIntegerProperty(0);
 
     @FXML
@@ -23,8 +22,16 @@ public class CounterController implements Initializable {
     Button incrementButton;
 
     @FXML
+    Button decrementButton;
+
+    @FXML
     public void increment(ActionEvent actionEvent) {
         counter.set(counter.get() + 1);
+    }
+
+    @FXML
+    public void decrement(ActionEvent actionEvent) {
+        counter.set(counter.get() - 1);
     }
 
     public int getCounter() {
@@ -44,5 +51,6 @@ public class CounterController implements Initializable {
         System.out.println("Initializing SayHelloController...");
         System.out.println("Location = " + location);
         System.out.println("Resources = " + resources);
+        counterLabel.textProperty().bind(counter.asString());
     }
 }
