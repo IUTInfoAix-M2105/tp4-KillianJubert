@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
 <fx:root xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.layout.BorderPane"
          xmlns="http://javafx.com/javafx/8.0.112">
+    <left>
+        <Label fx:id="messageScoreNoir"/>
+    </left>
+    <center>
+        <Label fx:id="messageTourDeJeu"/>
+    </center>
+    <right>
+        <Label fx:id="messageScoreBlanc"/>
+    </right>
 </fx:root>

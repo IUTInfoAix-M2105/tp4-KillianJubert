@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import fr.univ_amu.iut.exercice3.StatusBar?>
+<?import fr.univ_amu.iut.exercice3.Othellier?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             xmlns="http://javafx.com/javafx"
-            fx:controller="fr.univ_amu.iut.exercice3.OthelloController">
+            fx:controller="fr.univ_amu.iut.exercice3.OthelloController" fx:id="viewRoot">
+    <top>
+        <MenuBar>
+            <Menu text="Action">
+                <MenuItem fx:id="mNew" text="Nouvelle Partie"/>
+                <MenuItem fx:id="mQuit" text="Quitter"/>
+            </Menu>
+        </MenuBar>
+    </top>
 
+    <center>
+        <Othellier fx:id="othellier"/>
+    </center>
+    <bottom>
+        <StatusBar fx:id="statusBar"/>
+    </bottom>
 </BorderPane>

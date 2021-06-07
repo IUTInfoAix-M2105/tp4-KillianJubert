@@ -1,6 +1,7 @@
 package fr.univ_amu.iut.exercice3;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.image.Image;
 
 public class Joueur {
@@ -12,42 +13,51 @@ public class Joueur {
     private IntegerProperty score;
 
     Joueur(String fileName) {
-        throw new RuntimeException("Not yet implemented !");
+        image = new Image(fileName);
+        score = new SimpleIntegerProperty(0);
+
     }
 
     public static void initialiserScores() {
-        throw new RuntimeException("Not yet implemented !");
+        BLANC.initialiserScore();
+        NOIR.initialiserScore();
     }
 
     private void initialiserScore() {
-        throw new RuntimeException("Not yet implemented !");
+        score.set(0);
     }
-    
+
     public IntegerProperty scoreProperty() {
-        throw new RuntimeException("Not yet implemented !");
+        return score;
     }
 
     public int getScore() {
-        throw new RuntimeException("Not yet implemented !");
+        return score.get();
+
     }
-    
+
     private void setScore(int score) {
-        throw new RuntimeException("Not yet implemented !");
+        this.score.set(score);
     }
 
     public void decrementerScore() {
-        throw new RuntimeException("Not yet implemented !");
+        score.set(score.get() - 1);
+
     }
 
     public void incrementerScore() {
-        throw new RuntimeException("Not yet implemented !");
+        score.set(score.get() + 1);
     }
 
     public Image getImage() {
-        throw new RuntimeException("Not yet implemented !");
+        return image;
     }
 
     public Joueur suivant() {
-        throw new RuntimeException("Not yet implemented !");
+        if (this == BLANC) {
+            return NOIR;
+        } else {
+            return BLANC;
+        }
     }
 }
