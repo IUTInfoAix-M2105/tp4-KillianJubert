@@ -5,6 +5,7 @@
 <?import javafx.scene.text.Text?>
 <fx:root xmlns:fx="http://javafx.com/fxml"
          type="javafx.scene.layout.GridPane" styleClass="root" vgap="20" hgap="100" alignment="CENTER">
+
     <Text id="welcome-text" text="Welcome"
           GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
 
